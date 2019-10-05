@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ลงทะเบียน (POST)</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>ชื่อ : </ion-label>
+    <ion-input type="" [(ngModel)]="name"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label floating>นามสกุล : </ion-label>
+    <ion-input type="" [(ngModel)]="surname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>อีเมล์ : </ion-label>
+    <ion-input type="" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <h1></h1>
+  <button ion-button block (click)="postJson(name,surname,email)" >
+    <ion-icon name="log-in"></ion-icon> &nbsp; &nbsp; ลงทะเบียน
+  </button>
+  <h2>{{returnMsg}}</h2>
+
+
+</ion-content>
